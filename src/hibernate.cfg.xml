@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="SessionFactory">
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.password">admin</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/envosys</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.default_schema">envosys</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hbm2ddl.auto">validate</property>
+
+		<mapping class="com.ex.documentation.entity.MasterBLEntity" />
+		<mapping class="com.ex.documentation.entity.MasterBLContainerEnity" />
+		<mapping class="com.ex.documentation.entity.HouseBLEntity" />
+		<mapping class="com.ex.documentation.entity.HouseBLContainerEntity" />
+		<mapping class="com.Admin.USER.Entity.NewUserRegisteEntity" />
+		<mapping class="com.Master.PreDetails.entity.StateEntity" />
+		<mapping class="com.Master.PreDetails.entity.AlertEntity" />
+		<mapping class="com.Master.Customer.entity.CustomerEntity" />
+		<mapping class="com.Master.Customer.entity.CustomerDetailsGstEntity" />
+		<mapping class="com.Master.Customer.entity.CustomerDetailsAlertEntity" />
+		<mapping class="com.Master.Customer.entity.CustomerDetailsCreditRateEntity" />
+		<mapping class="com.Accounts.Master.entity.AccountDetails" />
+		<mapping class="com.Master.PreDetails.entity.CounterEntity" />
+		<mapping class="com.Master.Vessel.entity.VesselEntity" />
+
+
+	</session-factory>
+</hibernate-configuration>
